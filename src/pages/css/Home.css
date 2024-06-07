@@ -1,0 +1,133 @@
+/* Main container */
+.home-container {
+  max-width: 1200px; /* Adjust this to your preference */
+  margin: 0 auto;
+  padding: 20px;
+  position: relative; /* To position the Add button */
+}
+
+/* Greeting and logout button container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  align-items: center;
+  margin-bottom: 20px;
+  
+
+}
+
+.header p {
+  margin: 0;
+  font-size: 18px; /* Adjusted font size for better readability */
+}
+
+.header button {
+  padding: 6px 12px; /* Reduced padding for a smaller button */
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #4285f4; /* Matching color with the add button */
+  border: none;
+  border-radius: 4px;
+  color: white; /* Changed text color to white */
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  margin-right: 80%;
+}
+
+.header button:hover {
+  background-color: #357ae8;
+}
+
+/* NoteCard container */
+.note-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax values as needed */
+  grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust grid layout for smaller screens */
+  .note-card-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust minmax values for smaller screens */
+  }
+}
+
+/* Styles for NoteCard component */
+.note-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0; /* Lighter border for a cleaner look */
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.302), 0 1px 2px rgba(60, 64, 67, 0.149); /* Subtle shadow like Google Keep */
+  transition: box-shadow 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.note-card:hover {
+  box-shadow: 0 4px 8px rgba(60, 64, 67, 0.302), 0 2px 4px rgba(60, 64, 67, 0.149); /* Slightly stronger shadow on hover */
+}
+
+.note-card .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #202124; /* Dark text color */
+}
+
+.note-card .content {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #5f6368; /* Slightly lighter text color */
+}
+
+.note-card .date {
+  font-size: 12px;
+  color: #80868b; /* Gray color for the date */
+}
+
+.note-card .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.note-card .actions button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f1f3f4; /* Light background color for buttons */
+  border: none;
+  border-radius: 4px;
+  color: #3c4043; /* Dark text color for buttons */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.note-card .actions button:hover {
+  background-color: #e8eaed; /* Slightly darker background on hover */
+}
+
+/* Add button */
+.add-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  font-size: 24px;
+  background-color: #4285f4; /* Google Keep's blue color */
+  color: white;
+  border: none;
+  border-radius: 12px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button:hover {
+  background-color: #357ae8; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
